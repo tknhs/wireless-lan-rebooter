@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"net/url"
 	"os"
@@ -26,7 +25,6 @@ func LogInit() *logrus.Logger {
 	binPath, _ := osext.ExecutableFolder()
 	logPath := binPath + "wireless-lan-rebooter.log"
 
-	log.Println(logPath)
 	f, _ := os.OpenFile(logPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	logger.Out = f
 
